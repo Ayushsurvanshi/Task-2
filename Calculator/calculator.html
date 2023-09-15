@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name ="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="stationary 7.jpg" rel="shortcut icon" type="image/jpg">
+    <style>
+        
+        .container{
+            width: 100%;
+            height: 90vh;
+            background-color: rgb(170, 200, 226);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            
+    
+        }
+        
+    
+        .cal{
+            
+            
+            border: 10px solid black;
+            padding: 20px;
+            margin: 5px;
+            border-radius: 50px;
+            background: black;
+
+        }
+        .cal form input{
+            border: 0;
+            outline: 0;
+            margin: 3px;
+            width: 60px;
+            height: 60px;
+            border-radius: 100px;
+            box-shadow: rgb(rgb(180, 214, 230), green, rgb(188, 188, 200));
+            font-size: 20px;
+            color: #000106;
+            cursor: pointer;
+        }
+        .cal form input :active{
+            color: rgb(11, 15, 2);
+        }
+        form .display
+        {
+            display: flex;
+            justify-content: flex-end;
+            margin: 15px 0;
+
+        }
+        form .display input{
+            text-align: right;
+           flex-wrap: wrap;
+           flex: 1;
+           box-shadow: none;
+           font-size:45px  ;
+           display: flex;
+           
+
+
+
+
+        }
+        form input.equal{
+            width: 130px;
+                    }
+        
+    form input.operator{
+        color: rgb(188, 8, 8);
+    }
+    #height{
+        height: 30px;
+        margin:auto;
+        padding: 10px;
+        bottom: 5000px;
+        
+        
+        
+
+    }
+    #height u{
+        color: rgb(9, 5, 2);
+    }  
+    .back{
+        display: flex;
+        border: 5px solid black;
+        border-radius: 15px;
+        background-color: red;
+        height: 30px ;
+        cursor: pointer;
+        align-items: flex-start;
+        top: 100px;
+        bottom: -100px;
+
+    }   
+    .back a{
+        color: black;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 25px;
+        text-decoration: none;
+        text-align: center;
+        align-items: center;
+
+
+
+    }  
+    
+    
+    
+    
+
+
+    </style>
+</head>
+<body>
+    <div class="container" id="height">
+        <header> <h1> <u>Simple Calculator by Ayush survanshi</u></h1></header> </header>
+    </div>
+    
+    
+    
+    <div class="container">
+        <div class="back"><a href="stationary.html" >Back to home page</a></div>
+
+
+
+        
+        <div class="cal">
+            <form >
+                <div class="display">
+                    <input type="text" name="display">
+                    
+
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick=" display.value = '' "  >
+                    <input type="button" value="Del" onclick=" display.value = display.value.toString().slice (0,-1) ">
+                    <input type="button" value="." onclick=" display.value +='.' " class="operator">
+                    <input type="button" value="/" onclick=" display.value +='/' " class="operator">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick=" display.value +='7' ">
+                    <input type="button" value="8" onclick=" display.value +='8' ">
+                    <input type="button" value="9" onclick=" display.value +='9' ">
+                    <input type="button" value="*" onclick=" display.value +='*' "  class="operator">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick=" display.value +='4' ">
+                    <input type="button" value="5" onclick=" display.value +='5' ">
+                    <input type="button" value="6" onclick=" display.value +='6' ">
+                    <input type="button" value="-" onclick=" display.value +='-' "  class="operator">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick=" display.value +='1' ">
+                    <input type="button" value="2" onclick=" display.value +='2' ">
+                    <input type="button" value="3" onclick=" display.value +='3' ">
+                    <input type="button" value="+" onclick=" display.value +='+' "  class="operator">
+                </div><div>
+                    <input type="button" value="00" onclick=" display.value +='00' ">
+                    <input type="button" value="0" onclick=" display.value +='0' ">
+                    <input type="button" value="=" class="equal" onclick=" display.value = eval(display.value) "  class="operator">
+                </div>
+            </form>
+        </div>
+
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+</body>
+</html>
